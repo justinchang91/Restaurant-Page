@@ -1,0 +1,1 @@
+This is a project where I will be using webpack for the first time to basically create a restaurant page in only JavaScript!
