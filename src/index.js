@@ -1,4 +1,4 @@
-import {loadElements} from './load-elements'
+import {loadElements} from './load-elements';
 
 //const container = document.createElement("div");
 //container.textContent = "hello world";

@@ -1,10 +1,16 @@
+import './style.css';
+import meatball from './meatball.jpg';
+
 function loadElements(content) {
+    content.classList.add('content');
+
     const title = document.createElement("h1");
     title.textContent = "Meatball Factory";
     content.appendChild(title);
 
     const navbar = document.createElement("nav");
-    
+    navbar.classList.add('nav-bar');
+
     const home = document.createElement("button");
     home.textContent = "Home";
     
@@ -19,6 +25,10 @@ function loadElements(content) {
     navbar.appendChild(contact);
     
     content.appendChild(navbar);
+
+    const myMeatball = new Image();
+    myMeatball.src = meatball;
+    content.appendChild(myMeatball);
 
     const heading = document.createElement("h2");
     heading.textContent = "Home of Toronto's Tastiest Meatballs";
