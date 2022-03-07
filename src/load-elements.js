@@ -28,6 +28,8 @@ function loadElements(content) {
 
     const myMeatball = new Image();
     myMeatball.src = meatball;
+    myMeatball.style.width = '50vw';
+    myMeatball.style.height = 'auto';
     content.appendChild(myMeatball);
 
     const heading = document.createElement("h2");
