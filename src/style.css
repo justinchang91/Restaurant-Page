@@ -17,3 +17,8 @@ body {
     flex-direction: row;
     gap: 20px;
 }
+
+.meatball-img {
+    width: 50vw;
+    height: auto;
+}

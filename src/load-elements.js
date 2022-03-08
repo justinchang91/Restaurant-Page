@@ -1,11 +1,12 @@
 import './style.css';
-import meatball from './meatball.jpg';
+import {loadHome} from './load-home';
+import {loadMenu} from './load-menu';
 
-function loadElements(content) {
+function loadMainElements(content) {
     content.classList.add('content');
 
     const title = document.createElement("h1");
-    title.textContent = "Meatball Factory";
+    title.textContent = "The Meatball Factory";
     content.appendChild(title);
 
     const navbar = document.createElement("nav");
@@ -13,10 +14,18 @@ function loadElements(content) {
 
     const home = document.createElement("button");
     home.textContent = "Home";
-    
+    home.addEventListener('click', function() {
+        content.removeChild(content.lastChild);
+        loadHome(content);
+    });
+
     const menu = document.createElement("button");
     menu.textContent = "Menu";
-    
+    menu.addEventListener('click', function() {
+        content.removeChild(content.lastChild);
+        loadMenu(content);
+    });
+
     const contact = document.createElement("button");
     contact.textContent = "Contact";
     
@@ -25,22 +34,6 @@ function loadElements(content) {
     navbar.appendChild(contact);
     
     content.appendChild(navbar);
-
-    const myMeatball = new Image();
-    myMeatball.src = meatball;
-    myMeatball.style.width = '50vw';
-    myMeatball.style.height = 'auto';
-    content.appendChild(myMeatball);
-
-    const heading = document.createElement("h2");
-    heading.textContent = "Home of Toronto's Tastiest Meatballs";
-    content.appendChild(heading);
-
-    const intro = document.createElement("p");
-    intro.textContent = "Located in the heart of Toronto's Little Italy, Meatball Factory \
-                        has been happily serving Torontonians meatballs whose recipe dates back \
-                        to 1937. Come try out our meatballs today!";
-    content.appendChild(intro);
 }
 
-export { loadElements };
+export { loadMainElements };
