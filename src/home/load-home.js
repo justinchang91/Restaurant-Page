@@ -1,5 +1,5 @@
 import meatball from './meatball.jpg';
-import './style.css';;
+import '../style.css';
 
 function loadHome(content) {
 

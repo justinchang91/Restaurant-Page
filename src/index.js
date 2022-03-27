@@ -1,5 +1,5 @@
-import {loadMainElements} from './load-elements';
-import {loadHome} from './load-home';
+import {loadMainElements} from './load-main-elements';
+import {loadHome} from './home/load-home';
 //const container = document.createElement("div");
 //container.textContent = "hello world";
 

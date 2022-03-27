@@ -1,6 +1,6 @@
 import './style.css';
-import {loadHome} from './load-home';
-import {loadMenu} from './load-menu';
+import {loadHome} from './home/load-home';
+import {loadMenu} from './menu/load-menu';
 
 function loadMainElements(content) {
     content.classList.add('content');
